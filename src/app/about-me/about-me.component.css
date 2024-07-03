@@ -1,0 +1,39 @@
+.about-container {
+    display: flex;
+    align-items: flex-start; /* Aligns items at the top */
+    gap: 20px; /* Space between image and text */
+  }
+  
+  .profile-image img {
+    width: 250px; /* Set the image size, adjust as necessary */
+    height: auto;
+    border-radius: 10px; /* Optional: adds rounded corners to the image */
+  }
+  
+  /* about-me.component.css */
+.profile-info {
+    flex-grow: 1;
+    max-width: 400px; /* Set a maximum width for the text area */
+    padding: 0 20px; /* Optional padding for better text alignment */
+  }
+  
+  
+  .profile-info h2, .profile-info h3 {
+    margin: 0; /* Removes default margin */
+    padding-top: 0.5em; /* Small padding from top */
+  }
+  
+  .profile-info p {
+    margin-top: 1em; /* Space between title and description */
+  }
+  /* about-me.component.css */
+.social-link {
+    color: #007bff;  /* Standard blue color for hyperlinks */
+    text-decoration: none;  /* Removes underline by default */
+  }
+  
+  .social-link:hover, .social-link:focus {
+    color: #0056b3;  /* Darker shade of blue for hover/focus states */
+    text-decoration: underline;  /* Adds underline on hover/focus */
+  }
+  
