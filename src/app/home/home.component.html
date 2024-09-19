@@ -1,16 +1,47 @@
+<!-- src/app/home/home.component.html -->
 <div class="header-container">
     <div class="name-title">
-        <h1>Julien van Ostaaijen</h1><br>
-        <h2 class="title">Dr.</h2>
+      <h1>Julien van Ostaaijen</h1><br>
+      <h2 class="title">{{ 'TITLE' | translate }}</h2>
     </div>
-
-</div>
-<div class="publications-header">
-    <h3>Selectie publicaties/activiteiten</h3>
-</div>
-<div class="card-container">
+  </div>
+  
+  <div class="about-container">
+    <div class="profile-info"> 
+      <p>
+        {{ 'ABOUT_ME' | translate }}
+        <br><br><br>
+        {{ 'FIND_PUBLICATIONS' | translate }} 
+        <a href="https://research.tilburguniversity.edu/en/persons/julien-van-ostaaijen/publications/" target="_blank" rel="noopener noreferrer" class="social-link">
+          {{ 'TILBURG_UNIVERSITY' | translate }}
+        </a>
+      </p>
+    </div>
+  </div>
+  
+  <div class="publications-header">
+    <h3>{{ 'PUBLICATIONS_HEADER' | translate }}</h3>
+  </div>
+  <div class="card-container">
     <div class="card" *ngFor="let publication of publications" (click)="navigate(publication.link)">
-        <h4>{{ publication.title }}</h4>
-        <p>{{ publication.summary }}</p>
+      <h4>{{ publication.title }}</h4>
+      <p>{{ publication.summary }}</p>
     </div>
-</div>
+  </div>
+  <div class="contactinformation">
+    <h1>{{ 'CONTACT_INFORMATION' | translate }}</h1>
+    <p>
+      <a href="https://x.com/ostaaijen" target="_blank" rel="noopener noreferrer" class="social-link">
+        Twitter <fa-icon [icon]="faTwitter" class="icon"></fa-icon>
+      </a>
+    </p>
+    <p>
+      <a href="https://www.linkedin.com/in/ostaaijen/" target="_blank" rel="noopener noreferrer" class="social-link">
+        LinkedIn <fa-icon [icon]="faLinkedin" class="icon"></fa-icon>
+      </a>
+    </p>
+    <p>
+      {{ 'EMAIL' | translate }} <fa-icon [icon]="faEnvelope" class="icon"></fa-icon>: J.J.C.vanOstaaijen&#64;tilburguniversity.edu
+    </p>
+  </div>
+  

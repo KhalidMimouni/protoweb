@@ -1,31 +1,251 @@
-/* You can add global styles to this file, and also import other style files */
+/* src/styles.css */
 
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
+/* General Styles */
 body {
     margin: 0;
-    font-family: Roboto, "Helvetica Neue", sans-serif;
-}
-
-body {
+    font-family: 'Epilogue', sans-serif; /* Updated font */
+    background-color: #F5F5F5; /* Updated background color */
+    color: #333;
+  }
+  
+  a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Language Switcher */
+  .language-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+  }
+  
+  .language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  .flag-icon {
+    width: 30px;
+    height: 20px;
+  }
+  
+  /* Header */
+  .header-container {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #F5F5F5; /* Consistent background */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .name-title h1 {
     margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    /* Ensure a consistent font is used */
+    font-size: 2.5em;
+    color: #2c3e50;
+  }
+  
+  .name-title h2 {
+    margin-top: 10px;
+    font-size: 1.5em;
+    color: #7f8c8d;
+  }
+  
+  /* About Section */
+  .about-container {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #F5F5F5; /* Consistent background */
+  }
+  
+  .profile-info {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .profile-info p {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  /* Publications */
+  .publications-header {
+    text-align: center;
+    margin-top: 60px;
+    background-color: #F5F5F5; /* Consistent background */
+  }
+  
+  .publications-header h3 {
+    font-size: 2em;
+    color: #2c3e50;
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #F5F5F5; /* Consistent background */
+  }
+  
+  .card {
+    background-color: #fff; /* Retain white background for cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 300px;
+    margin: 15px;
+    padding: 20px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .card h4 {
+    margin-top: 0;
+    color: #2c3e50;
+  }
+  
+  .card p {
+    color: #555;
+  }
+  
+  /* Contact Information */
+  .contactinformation {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #F5F5F5; /* Consistent background */
+    border-top: 1px solid #ddd;
+  }
+  
+  .contactinformation h1 {
+    font-size: 2em;
+    color: #2c3e50;
+  }
+  
+  .contactinformation p {
+    font-size: 1.1em;
+    margin: 10px 0;
+  }
+  
+  .contactinformation .icon {
+    margin-left: 5px;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #F5F5F5; /* Consistent background */
+    color: #333; /* Updated text color for readability */
+    padding: 20px;
+    text-align: center;
+    border-top: 2px solid #000; /* Solid black border on top */
+  }
+  
+  .footer .cr {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .footer .social-icons {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .footer .social-icons a {
+    color: #333; /* Updated link color for readability */
+    margin: 0 10px;
+    font-size: 1.5em;
+  }
+  
+  .footer .social-icons a:hover {
+    color: #007BFF; /* Consistent hover color */
+  }
+  /* src/styles.css */
+
+/* Consistent Padding */
+.header-container,
+.about-container,
+.publications-header,
+.card-container,
+.contactinformation,
+.footer {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-/* Adding global padding to the main app container */
-.app-container {
-    padding: 0 220px;
-    /* Adjust this value to control the margin size */
-    margin: auto;
-    max-width: 1200px;
-    /* Maximum width can be adjusted based on your design preference */
+/* Consistent Margins for Headings */
+h1, h2, h3, h4 {
+  margin-bottom: 0.5em;
 }
+/* src/styles.css */
 
-/* You might need to adjust the padding-top for the body to accommodate the fixed navbar */
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    font-size: 1.1em;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2.5em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 2em;
+  }
+  
+  h4 {
+    font-size: 1.2em;
+  }
+/* src/styles.css */
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .name-title h1 {
+      font-size: 2em;
+    }
+    
+    .name-title h2 {
+      font-size: 1.2em;
+    }
+    
+    .publications-header h3 {
+      font-size: 1.5em;
+    }
+    
+    .card {
+      width: 90%; /* Adjust card width for smaller screens */
+      margin: 10px auto;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .name-title h1 {
+      font-size: 2.5em;
+    }
+    
+    .name-title h2 {
+      font-size: 1.5em;
+    }
+    
+    .publications-header h3 {
+      font-size: 2em;
+    }
+    
+    .card {
+      width: 300px;
+      margin: 15px;
+    }
+  }
+    

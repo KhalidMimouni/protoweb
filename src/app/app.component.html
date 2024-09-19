@@ -1,17 +1,28 @@
-<mat-toolbar color="primary" class="sticky-toolbar">
-  <span><a routerLink="/home">Home</a></span>
-  <span><a routerLink="/about">Over mij</a></span>
-</mat-toolbar>
+<!-- src/app/app.component.html -->
+<!-- Language Switcher -->
+<div class="language-switcher">
+  <button (click)="switchLanguage('en')">
+    <img src="assets/flags/en.png" alt="English" class="flag-icon">
+  </button>
+  <button (click)="switchLanguage('nl')">
+    <img src="assets/flags/nl.png" alt="Dutch" class="flag-icon">
+  </button>
+</div>
 
+<!-- Existing Content -->
 <div class="app-container">
   <router-outlet></router-outlet>
 </div>
 
-<!-- In app.component.html or footer.component.html -->
+<!-- Footer -->
 <footer class="footer">
   <span class="cr">© Julien van Ostaaijen</span>
   <div class="social-icons">
-    <fa-icon [icon]="faTwitter" class="icon"></fa-icon>
-    <fa-icon [icon]="faLinkedin" class="icon"></fa-icon>
+    <a href="https://twitter.com/ostaaijen" target="_blank" rel="noopener noreferrer">
+      <fa-icon [icon]="faTwitter" class="icon"></fa-icon>
+    </a>
+    <a href="https://www.linkedin.com/in/ostaaijen/" target="_blank" rel="noopener noreferrer">
+      <fa-icon [icon]="faLinkedin" class="icon"></fa-icon>
+    </a>
   </div>
 </footer>
